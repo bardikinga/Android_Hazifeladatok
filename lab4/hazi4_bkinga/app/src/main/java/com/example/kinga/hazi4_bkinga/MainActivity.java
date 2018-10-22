@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.huf
     };
 
-    String[] vevesArray = {"4,4100 RON", "3,9750 RON", "6,1250 RON", "2,9600 RON", "3,0950 RON", "4,2300 RON", "0,5850 RON", "0,0136 RON"};
-    String[] eladasArray = {"4,5500 RON", "4,1450 RON", "6,3550 RON", "3,0600 RON", "3,2650 RON", "4,3300 RON", "0,6150 RON", "0,0146 RON"};
+    String[] cumarArray = {"4,4100 RON", "3,9750 RON", "6,1250 RON", "2,9600 RON", "3,0950 RON", "4,2300 RON", "0,5850 RON", "0,0136 RON"};
+    String[] vanzariArray = {"4,5500 RON", "4,1450 RON", "6,3550 RON", "3,0600 RON", "3,2650 RON", "4,3300 RON", "0,6150 RON", "0,0146 RON"};
 
     ListView listView;
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        CustomListAdapter kinezet = new CustomListAdapter(this, nameArray, infoArray, imageArray, vevesArray, eladasArray);
+        CustomListAdapter kinezet = new CustomListAdapter(this, nameArray, infoArray, imageArray, cumarArray, vanzariArray);
         listView = (ListView) findViewById(R.id.listaID);
         listView.setAdapter(kinezet);
 
@@ -53,10 +53,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Detali.class);
                 String message = infoArray[position];
                 intent.putExtra("nev", message);
-                String message2 = vevesArray[position];
+                String message2 = cumarArray[position];
                 intent.putExtra("veves", message2);
-                String message3 = eladasArray[position];
+                String message3 = vanzariArray[position];
                 intent.putExtra("eladas", message3);
+
                 startActivity(intent);
 
             }

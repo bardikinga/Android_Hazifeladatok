@@ -2,6 +2,7 @@ package com.example.kinga.hazi4_bkinga;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 class Detali extends AppCompatActivity {
@@ -16,8 +17,10 @@ class Detali extends AppCompatActivity {
         TextView myText2 = (TextView) findViewById(R.id.vevesID);
         String savedExtra3 = getIntent().getStringExtra("eladas");
         TextView myText3 = (TextView) findViewById(R.id.eladasID);
+
         myText.setText(savedExtra);
         myText2.setText(savedExtra2);
         myText3.setText(savedExtra3);
+
     }
 }

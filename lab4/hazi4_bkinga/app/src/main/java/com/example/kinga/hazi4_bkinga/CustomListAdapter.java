@@ -14,19 +14,21 @@ class CustomListAdapter extends ArrayAdapter {
     private final Integer[] imageIDarray;
     private final String[] nameArray;
     private final String[] infoArray;
-    private final String[] eladasArray;
-    private final String[] vevesArray;
+    private final String[] cumarArray;
+    private final String[] vanzariArray;
 
 
-    public CustomListAdapter(Activity context, String[] nameArrayParam, String[] infoArrayParam, Integer[] imageIDArrayParam, String[] eladasArray, String[] vevesArray) {
+
+    public CustomListAdapter(Activity context, String[] nameArrayParam, String[] infoArrayParam, Integer[] imageIDArrayParam, String[] cumarArray, String[] vanzariArray) {
 
         super(context, R.layout.adapter2, nameArrayParam);
         this.context = context;
         this.imageIDarray = imageIDArrayParam;
         this.nameArray = nameArrayParam;
         this.infoArray = infoArrayParam;
-        this.eladasArray = eladasArray;
-        this.vevesArray = vevesArray;
+        this.cumarArray = cumarArray;
+        this.vanzariArray = vanzariArray;
+
 
     }
 
@@ -37,9 +39,13 @@ class CustomListAdapter extends ArrayAdapter {
         TextView nameTextField = (TextView) rowView.findViewById(R.id.nametextViewID);
         TextView infoTextField = (TextView) rowView.findViewById(R.id.infotextViewID);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.imageViewID);
+        TextView cumparari = (TextView) rowView.findViewById(R.id.CumID);
+        TextView vanzari = (TextView) rowView.findViewById(R.id.VanID);
         nameTextField.setText(nameArray[position]);
         infoTextField.setText(infoArray[position]);
         imageView.setImageResource(imageIDarray[position]);
+        cumparari.setText(cumarArray[position]);
+        vanzari.setText(vanzariArray[position]);
         return rowView;
 
     }
