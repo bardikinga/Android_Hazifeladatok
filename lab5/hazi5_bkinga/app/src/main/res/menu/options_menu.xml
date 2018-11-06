@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/rendez"
+        android:icon="@drawable/abc"
+        android:orderInCategory="1"
+        android:title="@string/rendez"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/kuka"
+        android:title="@string/torol"
+        app:showAsAction="ifRoom" />
+</menu>
